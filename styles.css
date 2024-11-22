@@ -1,0 +1,85 @@
+/* Estilo para a página */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom, #6a11cb, #2575fc);
+  color: white;
+  padding: 50px;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Botão base */
+button {
+  font-size: 20px;
+  padding: 15px 30px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Estilo do botão "Sim" */
+#btnSim {
+  background-color: #4caf50;
+  color: white;
+}
+#btnSim:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilo do botão "Não" */
+#btnNao {
+  background-color: #f44336;
+  color: white;
+  position: absolute; /* Permite movimentação */
+}
+#btnNao:hover {
+  background-color: #d32f2f;
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Animação inicial dos botões */
+@keyframes popIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+button {
+  animation: popIn 0.5s ease-in-out;
+}
+
+/* Estilo do rodapé */
+footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+  color: white;
+  opacity: 0.8;
+  margin: 0;
+}
